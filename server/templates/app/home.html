@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<h1>hello</h1>
+<form method="post" enctype='multipart/form-data'>
+    {% csrf_token %}
+    <label for="file">Select images:</label>
+    <input name="file" type="file" multiple="multiple"> 
+    <!-- {{ form.as_p }} -->
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock content %}
